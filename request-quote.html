@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Quote/KILLIS BIRD</title>
+     <link rel="icon" type="image/png" href="assets/Kill-Is-bird-final-logo_mini.PNG">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header (reuse your header code) -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <img src="assets/Kill-Is-bird-final-logo-2_1-removebg-preview.png" alt="KILLIS BIRD Logo">
+                <span>KILLIS BIRD</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <!-- <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Innovation</a></li> -->
+                    
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="request-quote.html" class="btn btn-header active">Request Quote</a>
+        </div>
+    </header>
+
+    <section class="quote-section">
+        <div class="container">
+            <h2>Request a Quote</h2>
+            <p>Please fill out the form below and our team will get back to you with a customized quote.</p>
+            <form class="quote-form" action="send_quote.php" method="POST">
+    <!-- form fields as before -->
+
+            <form class="quote-form" id="quoteForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="product">Product of Interest *</label>
+                    <select id="product" name="product" required>
+                        <option value="">Select a product</option>
+                        <option value="Flight Controller">Flight Controller</option>
+                        <option value="ESC">ESC</option>
+                        <option value="Frame">Frame</option>
+                        <option value="Propeller">Propeller</option>
+                        <option value="Ready To Fly Drones (RTF)">Ready To Fly Drones (RTF)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="details">Additional Details</label>
+                    <textarea id="details" name="details" rows="4" placeholder="Tell us more about your requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
+            <div id="quoteSuccess" style="display:none; color:green; margin-top:20px;">
+                Thank you! Your request has been submitted. We will contact you soon.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (reuse your footer code) -->
+    <footer>
+        <!-- ... -->
+    </footer>
+    <script>
+    // Simple form handler (demo only)
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('quoteForm').style.display = 'none';
+        document.getElementById('quoteSuccess').style.display = 'block';
+    });
+    </script>
+</body>
+</html>
