@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US/KILLIS BIRD </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/Kill-Is-bird-final-logo_mini.PNG">
+</head>
+<body>
+    <!-- Header (reuse your header code) -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <img src="assets/Kill-Is-bird-final-logo-2_1-removebg-preview.png" alt="KILLIS BIRD Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <!-- <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Innovation</a></li> -->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="request-quote.html" class="btn btn-header">Request Quote</a>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>
+                        <strong>Address:</strong><br>
+                        Plot No.107,
+                        Pollupalli SIDCO Industrial Estate,
+                        Gangasandiram, 
+                        Krishnagiri 635115.
+                    </p>
+                    <p>
+                        <strong>Phone:</strong><br>
+                        +91 72007 43683
+                    </p>
+                    <p>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:info@killisbird.com">info@killisbird.com</a>
+                    </p>
+                    <div class="socials">
+                    <a href="https://www.facebook.com/profile.php?id=61554771303958"><img src="assets/icons8-facebook-logo-94.png" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/company/killis-bird-llp/"><img src="assets/icons8-linkedin-94.png" alt="LinkedIn"></a>
+                    <a href="https://x.com/KillisBirdLLP"><img src="assets/icons8-twitter-100.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/killis_bird_llp/"><img src="assets/icons8-instagram-logo-94.png" alt="instagram"></a>
+                </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contact-name">Name *</label>
+                            <input type="text" id="contact-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email *</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message *</label>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="contactSuccess" style="display:none; color:green; margin-top:20px;">
+                        Thank you! Your message has been sent.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (reuse your footer code) -->
+    <footer>
+        <!-- ... -->
+    </footer>
+    <script>
+    // Simple form handler (demo only)
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'block';
+    });
+    </script>
+</body>
+</html>
